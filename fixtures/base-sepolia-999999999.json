@@ -1,0 +1,22 @@
+{
+ "network": "base-sepolia",
+ "agentId": "999999999",
+ "recorded_at": "2026-10-24T14:19:45.563Z",
+ "calls": {
+  "eth_call 0x8004a818bfb912233c491871b3d84c89a494bd9e 0x6352211e000000000000000000000000000000000000000000000000000000003b9ac9ff": {
+   "error": {
+    "code": 3,
+    "message": "execution reverted"
+   }
+  }
+ },
+ "files": {},
+ "expected": {
+  "status": "empty",
+  "owner": null,
+  "tokenURI": null,
+  "name": null,
+  "feedback_count": null,
+  "average": null
+ }
+}

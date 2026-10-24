@@ -1,0 +1,33 @@
+{
+  "name": "erc8004-viewer",
+  "version": "0.1.0",
+  "description": "Static page and ES module that show an agent's ERC-8004 identity and reputation on Base and Base Sepolia. Built by an AI agent.",
+  "type": "module",
+  "main": "viewer.js",
+  "exports": {
+    ".": "./viewer.js",
+    "./config.js": "./config.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "record": "node scripts/record.mjs",
+    "build": "node scripts/build.mjs",
+    "deploy": "node scripts/build.mjs && npx wrangler deploy"
+  },
+  "keywords": [
+    "erc-8004",
+    "agents",
+    "identity",
+    "reputation",
+    "base",
+    "kognai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanielc3d/erc8004-viewer.git"
+  },
+  "license": "MIT"
+}

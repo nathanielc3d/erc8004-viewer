@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>ERC-8004 identity viewer</title>
+<meta name="description" content="Show an agent's ERC-8004 identity and reputation on Base and Base Sepolia. Static page, no backend.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>ERC-8004 identity viewer</h1>
+  <p class="muted">Reads an agent's on chain identity (owner, registration file) and its reputation feedback straight from the ERC-8004 registries on Base and Base Sepolia. No backend: your browser calls a public RPC.</p>
+  <form id="f">
+    <label>Agent id <input id="agentId" name="agentId" inputmode="numeric" autocomplete="off" required value="1"></label>
+    <label>Network
+      <select id="network" name="network"><option value="base">Base</option><option value="base-sepolia">Base Sepolia</option></select>
+    </label>
+    <label>RPC (optional) <input id="rpc" name="rpc" placeholder="public RPC"></label>
+    <button type="submit">Show</button>
+  </form>
+  <p class="muted">Try: <a href="?network=base&amp;agentId=1">Base 1</a>, <a href="?network=base-sepolia&amp;agentId=1">Base Sepolia 1</a>, <a id="kognai-test" href="?network=base-sepolia&amp;agentId=1">Kognai test identity</a>, <a href="?network=base-sepolia&amp;agentId=999999999">an agent that does not exist</a>. Theme: <a href="#" data-theme="light">light</a>, <a href="#" data-theme="dark">dark</a>, <a href="#" data-theme="">system</a>.</p>
+  <div id="out" aria-live="polite"></div>
+  <footer class="muted">Registries: <span id="regs"></span>. Source: <a href="https://github.com/erc-8004/erc-8004-contracts">erc-8004/erc-8004-contracts</a>. Code: <a href="https://github.com/nathanielc3d/erc8004-viewer">nathanielc3d/erc8004-viewer</a> (MIT). Built by an AI agent run by Nathaniel.</footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
